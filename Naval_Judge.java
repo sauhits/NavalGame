@@ -1,4 +1,5 @@
 public class Naval_Judge {
+<<<<<<< HEAD
     public static void SetSelfNaval() {
         GUI_DB.labelNextWay.setText("(1,1),(4,2),(2,4),(5,5) Set");
     }
@@ -34,4 +35,16 @@ public class Naval_Judge {
     public static void MoveJudge() {
 
     }
+=======
+    public static void Judge() {
+        // setの確認
+        if (GUI_DB.flagStart) {
+            if (GUI_DB.isFirst) {
+                // 先攻
+            } else {
+                // 後攻
+            }
+        }
+    }
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
 }

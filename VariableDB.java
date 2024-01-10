@@ -1,12 +1,20 @@
 public class VariableDB {
+<<<<<<< HEAD
     static int enemyCoordinate[][] = new int[5][5];
     static int selfCoordinate[][] = new int[5][5];
+=======
+    static int enemyCoodinate[][] = new int[5][5];
+    static int selfCoodinate[][] = new int[5][5];
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
     // 判定の値
     private static final int availableOfNot = -1;
     private static final int availableOfNear = 1;
     private static final int availableOfHit = 10;
 
+<<<<<<< HEAD
     // 二次元配列を埋める
+=======
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
     public static void fillArrayFigure(int[][] twoArray, int fillFigure) {
         for (int i = 0; i < twoArray.length; i++) {
             for (int j = 0; j < twoArray.length; j++) {
@@ -15,8 +23,12 @@ public class VariableDB {
         }
     }
 
+<<<<<<< HEAD
     // 敵艦の評価を入力する
     public static void setEnemyCoordinate(int x, int y, int state) {
+=======
+    public static void setEnemyCoodinate(int x, int y, int state) {
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
         switch (state) {
             case 0:
                 // Not処理
@@ -25,7 +37,11 @@ public class VariableDB {
                         int affectationX = x + i;
                         int affectationY = y + j;
                         if (affectationX >= 0 && affectationX < 5 && affectationY >= 0 && affectationY < 5) {
+<<<<<<< HEAD
                             enemyCoordinate[affectationX][affectationY] = availableOfNot;
+=======
+                            enemyCoodinate[affectationX][affectationY] = availableOfNot;
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
                         }
                     }
                 }
@@ -39,24 +55,38 @@ public class VariableDB {
                         // 範囲の確認
                         if (affectationX >= 0 && affectationX < 5 && affectationY >= 0 && affectationY < 5) {
                             // Not地点の回避
+<<<<<<< HEAD
                             if (enemyCoordinate[affectationX][affectationY] != -1) {
                                 enemyCoordinate[affectationX][affectationY] += availableOfNear;
+=======
+                            if (enemyCoodinate[affectationX][affectationY] != -1) {
+                                enemyCoodinate[affectationX][affectationY] += availableOfNear;
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
                             }
                         }
                     }
                 }
                 // 攻撃地点をNot処理する
+<<<<<<< HEAD
                 enemyCoordinate[x][y] = availableOfNot;
                 break;
             case 2:
                 // Hit処理
                 enemyCoordinate[x][y] = availableOfHit;
+=======
+                enemyCoodinate[x][y] = availableOfNot;
+                break;
+            case 2:
+                // Hit処理
+                enemyCoodinate[x][y] = availableOfHit;
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
                 break;
             default:
                 break;
         }
     }
 
+<<<<<<< HEAD
     // 一番評価の高い座標を返す(複数存在するならnullを返す)
     public static int[] getEnemyMostEvaluation() {
         int[] coordinate = new int[2];
@@ -82,10 +112,16 @@ public class VariableDB {
     // Enemyの評価を返す
     public static int getEnemyEvaluation(int x, int y) {
         return enemyCoordinate[x][y];
+=======
+    // Enemyの評価を返す
+    public static int getEnemyEvaluation(int x, int y) {
+        return enemyCoodinate[x][y];
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
     }
 
     // Enemyの評価を設定する
     public static void setEnemyEvaluation(int x, int y, int evaluation) {
+<<<<<<< HEAD
         enemyCoordinate[x][y] = evaluation;
     }
 
@@ -95,6 +131,17 @@ public class VariableDB {
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 System.out.print(selfCoordinate[i][j]);
+=======
+        enemyCoodinate[x][y] = evaluation;
+    }
+
+    // 新たに自軍の船を設定する
+    public static void newSelfCoodinate(int x, int y) {
+        selfCoodinate[x][y] = 3;
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(selfCoodinate[i][j]);
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
             }
             System.out.println();
         }
@@ -105,6 +152,7 @@ public class VariableDB {
         String localStyle = "-fx-base: #f185ff";
         System.out.println(health);
         // 自軍の船があるか確認
+<<<<<<< HEAD
         if (selfCoordinate[x][y] != 0 && selfCoordinate[x][y] != -99) {
             if (health == 0) {
                 selfCoordinate[x][y] = -99;
@@ -112,6 +160,15 @@ public class VariableDB {
                 localStyle = "-fx-base: #080808";
             } else {
                 selfCoordinate[x][y] = health;
+=======
+        if (selfCoodinate[x][y] != 0 && selfCoodinate[x][y] != -99) {
+            if (health == 0) {
+                selfCoodinate[x][y] = -99;
+                // black
+                localStyle = "-fx-base: #080808";
+            } else {
+                selfCoodinate[x][y] = health;
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
                 switch (health) {
                     case 1:
                         // red
@@ -128,14 +185,22 @@ public class VariableDB {
                     default:
                         break;
                 }
+<<<<<<< HEAD
                 GUI_DB.buttonSelfCoordinates[x][y].setStyle(localStyle);
+=======
+                GUI_DB.buttonSelfCoodinates[x][y].setStyle(localStyle);
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
             }
         }
     }
 
     // healthを取得する
     public static int getSelfHealth(int x, int y) {
+<<<<<<< HEAD
         return selfCoordinate[x][y];
+=======
+        return selfCoodinate[x][y];
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
     }
 
     // 指定座標が攻撃できるかどうか
@@ -155,6 +220,7 @@ public class VariableDB {
         return check;
     }
 
+<<<<<<< HEAD
     // 自軍の座標を取得する x優勢
     public static int[][] getSelfCoordinate() {
         int[][] selfCoordinate = new int[4][2];
@@ -171,4 +237,6 @@ public class VariableDB {
         return selfCoordinate;
     }
 
+=======
+>>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
 }
