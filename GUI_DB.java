@@ -13,11 +13,7 @@ public class GUI_DB {
         static boolean flagSelf = false;
         static boolean flagStart = false;
         static boolean isFirst = false;
-<<<<<<< HEAD
         static int[][] copyEnemyCoordinate = new int[5][5];
-=======
-        static int[][] copyEnemyCoodinate = new int[5][5];
->>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
         static int logCapacity = 5;
         static List<String> listLog = new ArrayList<String>(logCapacity);
         static int countLog = 1;
@@ -25,19 +21,11 @@ public class GUI_DB {
         static int localX, localY;
 
         // Enemy:ラベルの作成
-<<<<<<< HEAD
         static Label labelEnemyNaval = Naval.createLabel("EnemyNaval", "Enemy Naval");
         // Enemy:座標を表示するラベルの作成
         static Label labelActiveEnemyCoordinate = Naval.createLabel("activeEnemyCoordinate", "none");
         // 表示記号の作成-----------------------------------
         static String[][] textsCoordinate = {
-=======
-        static Label labelEnemylNaval = Naval.createLabel("EnemyNaval", "Enemy Naval");
-        // Enemy:座標を表示するラベルの作成
-        static Label labelActiveEnemyCoodinate = Naval.createLabel("activeEnemyCoodinate", "none");
-        // 表示記号の作成-----------------------------------
-        static String[][] textsCoodinates = {
->>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
                         { "1,1", "2,1", "3,1", "4,1", "5,1" },
                         { "1,2", "2,2", "3,2", "4,2", "5,2" },
                         { "1,3", "2,3", "3,3", "4,3", "5,3" },
@@ -53,13 +41,8 @@ public class GUI_DB {
         };
         // Enemy:グリッドの作成
         static GridPane gridPaneEnemy = new GridPane();
-<<<<<<< HEAD
         // Enemy:CoordinateButtonの作成-----------------------------------
         static Button[][] buttonEnemyCoordinates = new Button[5][5];
-=======
-        // Enemy:CoodinateButtonの作成-----------------------------------
-        static Button[][] buttonEnemyCoodinates = new Button[5][5];
->>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
         // Enemy:stateButtonの作成
         static Button buttonHit = Naval.createButton("HIT", 83.3, 40.0);
         static Button buttonNot = Naval.createButton("NOT", 83.3, 40.0);
@@ -76,7 +59,6 @@ public class GUI_DB {
         // Calculate:ラベルの作成
         static Label labelCalculate = Naval.createLabel("calculate", "Calculate Now");
         // Calculate:ボタンの作成
-<<<<<<< HEAD
         static Button[][] buttonCalculateCoordinates = new Button[5][5];
         // Calculate:グリッドの作成
         static GridPane gridpaneCalculate = new GridPane();
@@ -85,16 +67,6 @@ public class GUI_DB {
         static Label labelActiveSelfCoordinate = Naval.createLabel("selfCoordinate", "none");
         // Self:ボタンの作成
         static Button[][] buttonSelfCoordinates = new Button[5][5];
-=======
-        static Button[][] buttonCalculateCoodinates = new Button[5][5];
-        // Calucurate:グリッドの作成
-        static GridPane gridpaneCalculate = new GridPane();
-        // Self:ラベルの作成
-        static Label labelSelf = Naval.createLabel("labelSelf", "Self Nabel");
-        static Label labelActiveSelfCoodinate = Naval.createLabel("selfCoodinate", "none");
-        // Self:ボタンの作成
-        static Button[][] buttonSelfCoodinates = new Button[5][5];
->>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
         static Button buttonSelfSet = Naval.createButton("SET", 125.0, 40.0);
         static Button buttonSelfFired = Naval.createButton("BE FIRED", 125.0, 40.0);
         // Self:gridpaneの作成
@@ -107,11 +79,8 @@ public class GUI_DB {
         static Label labelLog3 = new Label("none");
         static Label labelLog4 = new Label("none");
         static Label labelLog5 = new Label("none");
-<<<<<<< HEAD
         // Next:ラベルの作成
         static Label labelNextTitle = Naval.createLabel("labelNextTitle","NEXT ->");
         static Label labelNextWay = Naval.createLabel("labelNextWay","none");
 
-=======
->>>>>>> 8751749f6252ea4a5d426eb70b2bdefaa54e77bc
 }
